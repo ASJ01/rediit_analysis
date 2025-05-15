@@ -1,0 +1,4 @@
+Flask
+praw
+python-dotenv
+pymongo 
