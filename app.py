@@ -13,7 +13,7 @@ app.secret_key = os.getenv("SECRET_KEY")
 
 CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
 CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
-REDIRECT_URI = os.getenv("REDDIT_REDIRECT_URI", "https://rediit-analysis-5.onrender.com/reddit_analysis_callback")
+REDIRECT_URI = os.getenv("REDDIT_REDIRECT_URI", "https://rediit-analysis-6.onrender.com/reddit_analysis_callback")
 
 # Replace with your actual MongoDB connection string
 MONGO_URI = "mongodb+srv://ankushraina24:Ankush2003@testsocialmedia.uuo8yht.mongodb.net/"
