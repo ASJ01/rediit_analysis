@@ -13,7 +13,7 @@ app.secret_key = os.getenv("SECRET_KEY")
 
 CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
 CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
-REDIRECT_URI = os.getenv("REDDIT_REDIRECT_URI")
+REDIRECT_URI = os.getenv("REDDIT_REDIRECT_URI", "https://rediit-analysis-2.onrender.com/reddit_analysis_callback")
 
 # Replace with your actual MongoDB connection string
 MONGO_URI = "mongodb+srv://ankushraina24:Ankush2003@testsocialmedia.uuo8yht.mongodb.net/"
@@ -41,8 +41,8 @@ def login():
 
 
 # Step 3: Handle Reddit callback
-@app.route('/authorize_callback')
-def authorized():
+@app.route('/reddit_analysis_callback')
+def reddit_analysis_callback():
     code = request.args.get("code")
     if not code:
         return "Authorization failed", 400
@@ -137,4 +137,4 @@ def datetimeformat(value):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5000)
